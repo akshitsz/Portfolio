@@ -1,0 +1,108 @@
+﻿AKSHIT SINGH    
+
+            Faridabad, India | +91 9310475910 | akshit1742@gmail.com | www.linkedin.com/in/akshitsingh8 | https://github.com/akshitsz    
+   
+
+OBJECTIVE    
+   
+Dynamic and detail-oriented IT professional with a strong foundation in Python, React.js, and MySQL. Adept at implementing innovative 
+solutions, solving complex problems, and optimizing processes to enhance efficiency. Skilled in strategizing effective web development 
+approaches and delivering user-centric designs. Eager to contribute technical expertise and critical thinking to drive impactful projects while 
+continuously learning and adapting to emerging technologies.   
+   
+
+EXPERIENCE   
+
+  
+PRYM AEROSPACE  
+Software Intern (Jan 2025- Jun 2025)  
+  
+
+• Started working on the SHAKTI project, focusing on frontend development using React.js and Tailwind CSS.  
+• Built interactive user dashboard to monitor drone activity including status, location, and telemetry data.  
+• Collaborated with the backend developers and gained hands-on experience integrating REST APIs.  
+• Participated in daily stands-ups and project discussions, improving cross-functional team coordination.  
+
+  
+Jr. Full Stack Developer (Jul 2025- Present)  
+  
+
+• Took end-to-end ownership of features on the SHAKTI platform, including real-time GPS tracking, battery and temperature 
+monitoring and deployment history.  
+
+• Developed and optimized Node.js + Express.js APIs and implemented WebSocket for live drone data streaming.  
+• Designed MongoDB schemas for drone records and alert systems.  
+• Contributed to delivering a scalable, production-ready solution tailored for aerospace use cases.  
+
+  
+
+EDUCATION    
+
+  
+
+ B Tech in Information Technology   
+J.C. Bose University of Science and Technology | Aug 2020 – Jul 2024   
+
+ Senior Secondary School   
+
+DAV Public School | Jun 2019 - Mar 2020    
+
+High School   
+
+DAV Public School | Jun 2017 - Mar 2018   
+  
+
+ SKILLS   
+
+ 
+
+• Programming Languages: Python, JavaScript  
+
+• Libraries/Frameworks: Node.js, React.js, Express.js   
+
+• Tools/Platforms: Git, GitHub, Figma   
+• Databases: MySQL, Mongo DB   
+• Soft Skills: Communication, Critical Thinking, Problem-Solving, Teamwork   
+
+     
+
+PROJECTS    
+
+   
+  Elite Mart E-commerce Website                                                                                                                                              [Demo link]   
+
+Technologies: HTML, CSS, JavaScript, React.js   
+
+• Developed a dynamic and interactive web application for trending clothes shopping.   
+
+• Implemented features like easy search, detailed listings, secure buying, user reviews, and responsive design.   
+
+EV Web-app                                                                                                                                                                              [Demo link]    
+
+Technologies: React.js   
+
+• Implemented an EV web-app for selling and buying a new electric car.   
+
+• Integrated features such as models, current news, charging port, and technology used like battery and other stuff.   
+   
+
+
+
+Blood Management System Using Database  
+
+ Technologies: Mongo DB   
+
+• Managed a blood bank dataset through Mongo DB.   
+• Oversaw blood types, donors, recipients, availability and units.      
+
+   
+
+CERTIFICATIONS    
+
+ 
+
+• MERN stack development by Vector India [https://vectorindiacertificate.tiiny.site]   
+
+• Entrepreneurship Essentials by NPTEL   
+
+• Training of Trainers by NPTEL
