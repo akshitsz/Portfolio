@@ -185,9 +185,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📞 Contact
 
-- **Email**: abhishek.ganvir@example.com
-- **LinkedIn**: [linkedin.com/in/abhishekganvir](https://linkedin.com/in/abhishekganvir)
-- **GitHub**: [github.com/abhishekganvir](https://github.com/abhishekganvir)
+- **Email**: akshit1742@gmail.com
+- **LinkedIn**: [linkedin.com/in/abhishekganvir](https://linkedin.com/in/akshitsingh8)
+- **GitHub**: [github.com/abhishekganvir](https://github.com/akshitsz)
 
 ---
 
