@@ -1,4 +1,4 @@
-# Abhishek Ganvir - Portfolio Website
+# Akshit Singh - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS, showcasing full-stack development skills and MERN stack projects.
 
@@ -81,7 +81,7 @@ portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/abhishekganvir/portfolio.git
+   git clone https://github.com/akshitsz/portfolio.git
    cd portfolio
    ```
 
