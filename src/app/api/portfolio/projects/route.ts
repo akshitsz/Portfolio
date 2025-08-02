@@ -83,14 +83,15 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Create project error:', error);
-    
-    if (error.message === 'No token provided' || error.message === 'Invalid token') {
+
+    // Type guard to check if error is an Error instance with a message
+    if (error instanceof Error && (error.message === 'No token provided' || error.message === 'Invalid token')) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
       );
     }
-    
+
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

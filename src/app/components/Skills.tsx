@@ -30,7 +30,7 @@ export default function Skills() {
         // Set default active category to the first available category
         if (data.skills && data.skills.length > 0) {
           const categories = [...new Set(data.skills.map((skill: Skill) => skill.category))];
-          setActiveCategory(categories[0] || 'Frontend');
+          setActiveCategory((categories[0] as string) || 'Frontend');
         }
       } catch (error) {
         console.error('Error fetching skills:', error);
