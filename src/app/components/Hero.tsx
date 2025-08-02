@@ -4,11 +4,21 @@ import { useEffect, useState } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import OrbitingElements from './OrbitingElements';
 
+interface BioData {
+  title: string;
+  subtitle: string;
+  description: string;
+  profileImage?: string;
+  resumeLink?: string;
+}
+
 export default function Hero() {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const [bioData, setBioData] = useState<BioData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const roles = [
     'Full Stack Developer',
@@ -18,6 +28,25 @@ export default function Hero() {
     'Python Developer',
     'UI/UX Designer'
   ];
+
+  // Fetch bio data from API
+  useEffect(() => {
+    const fetchBioData = async () => {
+      try {
+        const response = await fetch('/api/portfolio/bio');
+        const data = await response.json();
+        if (data.bio) {
+          setBioData(data.bio);
+        }
+      } catch (error) {
+        console.error('Error fetching bio data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBioData();
+  }, []);
 
   useEffect(() => {
     const handleType = () => {
@@ -75,9 +104,17 @@ export default function Hero() {
           >
             {/* Profile Image */}
             <div className="relative mx-auto w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl sm:text-2xl md:text-3xl font-bold shadow-lg">
-                AS
-              </div>
+              {bioData?.profileImage ? (
+                <img
+                  src={bioData.profileImage}
+                  alt={bioData.title || 'Profile'}
+                  className="w-full h-full rounded-full object-cover shadow-lg"
+                />
+              ) : (
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl sm:text-2xl md:text-3xl font-bold shadow-lg">
+                  {bioData?.title ? bioData.title.split(' ').map(n => n[0]).join('').toUpperCase() : 'AS'}
+                </div>
+              )}
             </div>
 
             {/* Main Heading */}
@@ -89,7 +126,7 @@ export default function Hero() {
                 >
                   Hi, I'm{' '}
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Akshit
+                    {bioData?.title || 'Akshit'}
                   </span>
                 </span>
               </h1>
@@ -99,21 +136,28 @@ export default function Hero() {
                 style={{ color: 'var(--text-secondary)' }}
               >
                 <span className="border-r-2 border-blue-500 pr-2 animate-pulse">
-                  {text}
+                  {bioData?.subtitle || text}
                 </span>
               </div>
             </div>
 
             {/* Description */}
             <div className="max-w-2xl mx-auto">
-              <p
-                className="text-base sm:text-lg leading-relaxed"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                Passionate Software Developer with a strong IT background, specializing in creating innovative
-                web applications and scalable solutions. Proficient in modern technologies including React.js,
-                Node.js, and Python, with expertise in full-stack development and database management.
-              </p>
+              {isLoading ? (
+                <div className="animate-pulse">
+                  <div className="h-4 bg-gray-300 rounded w-3/4 mx-auto mb-2"></div>
+                  <div className="h-4 bg-gray-300 rounded w-1/2 mx-auto"></div>
+                </div>
+              ) : (
+                <p
+                  className="text-base sm:text-lg leading-relaxed"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  {bioData?.description ||
+                    'Passionate Software Developer with a strong IT background, specializing in creating innovative web applications and scalable solutions. Proficient in modern technologies including React.js, Node.js, and Python, with expertise in full-stack development and database management.'
+                  }
+                </p>
+              )}
             </div>
 
             {/* CTA Buttons */}
@@ -172,18 +216,21 @@ export default function Hero() {
               >
                 <Mail className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
               </a>
-              <a
-                href="/Resume_08.pdf"
-                download
-                className="modern-card p-2 hover:scale-105 transition-all duration-200"
-                style={{
-                  backgroundColor: 'var(--bg-card)',
-                  borderColor: 'var(--border-light)'
-                }}
-                aria-label="Download Resume"
-              >
-                <Download className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
-              </a>
+              {bioData?.resumeLink && (
+                <a
+                  href={bioData.resumeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modern-card p-2 hover:scale-105 transition-all duration-200"
+                  style={{
+                    backgroundColor: 'var(--bg-card)',
+                    borderColor: 'var(--border-light)'
+                  }}
+                  aria-label="Download Resume"
+                >
+                  <Download className="h-4 w-4" style={{ color: 'var(--text-secondary)' }} />
+                </a>
+              )}
             </div>
           </div>
 
