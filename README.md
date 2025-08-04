@@ -95,8 +95,8 @@ portfolio/
    npm run dev
    ```
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+4. **Open your browser For demo**
+   Navigate to https://akshitsingh17.vercel.app/
 
 ## 📱 Featured Projects
 
